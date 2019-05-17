@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import '@/assets/css/adapter.css'
+import '@/assets/css/base.css'
+import '@/assets/dist/css/mui.min.css'
+import '@/assets/dist/js/mui.min.js'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

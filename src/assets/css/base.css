@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+}
+html,body {
+    height: 100%;
+}
+.clearfix::after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: bock;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}

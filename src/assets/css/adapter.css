@@ -1,44 +1,44 @@
 html {
     font-size: 16px;
 }
-/* 设计图为750px,分成75份 */
+/* 设计图为750px,分成7.5 　　　由于设计图是750的,所以计算时需要　2倍*/    
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 13.65px;
+        font-size: 136.53px;
     }
 }
 @media screen and (max-width: 768px) {
     html {
-        font-size: 10.24px;
+        font-size: 102.4px;
     }
 }
 @media screen and (max-width: 496px) {
     html {
-        font-size: 6.61px;
+        font-size: 66.13px;
     }
 }
 @media screen and (max-width: 414px) {
     html {
-        font-size: 5.52px;
+        font-size: 55.2px;
     }
 }
 @media screen and (max-width: 411px) {
     html {
-        font-size: 5.48px;
+        font-size: 54.8px;
     }
 }
 @media screen and (max-width: 375px) {
     html {
-        font-size: 5px;
+        font-size: 50px;
     }
 }
 @media screen and (max-width: 360px) {
     html {
-        font-size: 4.8px;
+        font-size: 48px;
     }
 }
 @media screen and (max-width: 320px) {
     html {
-        font-size: 4.27px;
+        font-size: 42.67px;
     }
 }
