@@ -4,6 +4,41 @@ html {
 /* 设计图为750px,分成75份 */
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 
+        font-size: 13.65px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 10.24px;
+    }
+}
+@media screen and (max-width: 496px) {
+    html {
+        font-size: 6.61px;
+    }
+}
+@media screen and (max-width: 414px) {
+    html {
+        font-size: 5.52px;
+    }
+}
+@media screen and (max-width: 411px) {
+    html {
+        font-size: 5.48px;
+    }
+}
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 5px;
+    }
+}
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 4.8px;
+    }
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 4.27px;
     }
 }
