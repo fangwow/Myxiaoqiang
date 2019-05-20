@@ -28,7 +28,7 @@
             <div class="goodsInfo">
                 <div class="goods_title">
                     <span>货物信息</span>
-                    <button>详细体积重量</button>
+                    <button @click='detailTiji()'>详细体积重量</button>
                 </div>
                 <!-- 总体积 -->
                 <div class="item-form">
@@ -105,11 +105,16 @@
                 </div>
             </div>
         </div>
+        <!-- tab部分 -->
+        <tab-bottom></tab-bottom>
     </div>
 </template>
 
 <script>
+// 头部组件
 import headerTitle from '@/components/home/header.vue'
+// 底部组件
+import tabBottom from '@/components/home/tabBottom.vue'
 export default {
     data(){
         return{
@@ -117,7 +122,16 @@ export default {
         }
     },
     components: {
-        headerTitle
+        headerTitle,
+        tabBottom
+    },
+    methods: {
+        // 跳转到详细体积重量
+        detailTiji(){
+            this.$router.push({
+                path: '/detail_tiji'
+            });
+        }
     }
 }
 </script>
@@ -156,6 +170,7 @@ export default {
                         display: block;
                         flex: 1;
                         height: 100%;
+                        font-size: 0.32rem;
                         text-align: center;
                         border-radius: 0.29rem;
                     }
@@ -180,6 +195,7 @@ export default {
                         display: block;
                         width: 2.61rem;
                         height: 0.44rem;
+                        line-height: 0.44rem;
                         border-radius: 0.22rem;
                         border: 0.02rem solid#58c3e0;
                         font-size: 0.26rem;
@@ -243,6 +259,7 @@ export default {
                     border-bottom: 0.01rem solid #dddddd;
                     display: flex;
                     align-items: center;
+                    padding-bottom: 0.01rem;
                     label {
                         width: 2.12rem;
                         display: block;
@@ -347,6 +364,12 @@ export default {
                 }
             }
         }
+        // 底部tab
+        // .tab_bottom {
+        //     position: fixed;
+        //     bottom: 0;
+        //     left: 0;
+        // }
     }
     .home .body .goodsInfo .bb {
         border-bottom: 0 none;

@@ -9,6 +9,11 @@
 html,body {
     height: 100%;
 }
+input,img {
+    display: block;
+    border: 0 none;
+    outline: 0 none;
+}
 .clearfix::after {
     content: '';
     height: 0;
