@@ -1,13 +1,20 @@
 <template>
     <div class="header">
-        <i class='back'></i>
+        <i class='back' @click='back(path)'></i>
         <span>{{title}}</span>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['title']
+    props: ['title','path'],
+    methods: {
+        back(path){
+            this.$router.push({
+                path: path
+            });
+        }
+    }
 }
 </script>
 

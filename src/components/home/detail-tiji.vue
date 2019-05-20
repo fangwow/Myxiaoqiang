@@ -1,7 +1,7 @@
 <template>
     <div class="detail">
         <!-- 头部部分 -->
-        <header-title :title='title' class='title'></header-title>
+        <header-title :title='title' :path='path' class='title'></header-title>
         <div class="body">
             <!-- 单个体积 -->
             <div class="tiji">
@@ -34,12 +34,12 @@
                     </div>
                 </div>
                 <!-- 确认 -->
-                <div class="item sub">
+                <!-- <div class="item sub">
                     <button class='btn'>确认</button>
-                </div>
+                </div> -->
             </div>
             <!-- 重量 -->
-            <div class="tiji">
+            <div class="tiji weight">
                 <!-- 单个体积 -->
                 <div class="item">
                     <label for="">单个重量 </label>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <!-- 详情 -->
-            <div class="tiji">
+            <div class="tiji weight">
                 <!-- 单个体积 -->
                 <div class="item_detail">
                     <span>详细</span>
@@ -112,7 +112,8 @@ import headerTitle from '@/components/home/header_back.vue'
 export default {
     data(){
         return {
-            title: '详细体积重量'
+            title: '详细体积重量',
+            path: '/'
         }
     },
     methods: {
@@ -140,7 +141,8 @@ export default {
         // 体积
         .tiji {
             width: 100%;
-            height: 3.6rem;
+            // height: 3.6rem;
+            height: 2.59rem;
             padding-left: 0.31rem;
             background: #fff;
             margin-bottom: 0.1rem;
@@ -174,6 +176,7 @@ export default {
                         border: 0.02rem solid #cccccc;
                         font-size: 0.26rem;
                         color: #999;
+                        padding: 0;
                     }
                     .input {
                         text-align: center;
@@ -213,6 +216,9 @@ export default {
             }
             // 体积重量详情
             
+        }
+        .weight {
+            height: 3.6rem;
         }
         // 体积重量详情
         .item_detail {

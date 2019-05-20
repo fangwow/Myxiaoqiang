@@ -9,7 +9,7 @@ import '@/assets/dist/css/mui.min.css'
 import '@/assets/dist/js/mui.min.js'
 // 引入axios
 import axios from 'axios'
-axios.defaults.baseURL = '192.168.31.171:8081/'
+axios.defaults.baseURL = 'http://192.168.31.171:8081/'
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 

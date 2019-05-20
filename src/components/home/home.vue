@@ -271,6 +271,7 @@ export default {
                     input {
                         display: block;
                         flex: 1;
+                        height: 99%;
                         margin-bottom: 0;
                         border: 0 none;
                         outline: 0 none;
@@ -316,8 +317,8 @@ export default {
                             text-align: center;
                             img {
                                 width: 0.79rem;
-                                height: 0.79rem;                     
-                                margin-top: 0.37rem;
+                                height: 0.79rem;  
+                                margin: 0.37rem auto 0;
                             }
                             span {
                                 display: block;

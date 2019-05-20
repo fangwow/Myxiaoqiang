@@ -47,8 +47,36 @@
                     console.log('请输入密码');
                     return;
                 }
-                // const res = await thsis.$http.get(`/shipper/api/login?phone=${this.phone}&password=${this.password}`);
-                // console.log(res);
+                const res = await this.$http.get(`/shipper/api/login?phone=${this.phone}&password=${this.password}`);
+                console.log(res);
+                if(res.data.resultCode == 0){
+                    // 保存用户cookie信息
+                    window.localStorage.userId = res.data.data.userBase.id;    //用户id
+                    window.localStorage.phone = res.data.data.phone;    //用户手机号
+                    window.localStorage.phone = res.data.data.phone;    //用户手机号
+                    window.localStorage.shipperType = res.data.data.userInfo.shipperType;  //合同制
+                    // 提示用户登录成功,判断用户是不是合同用户,如果不是判断用户是否认证,如果没有认证跳转到认证页面,认证跳转到首页      
+                    if(res.data.data.userInfo.shipperType !== 'H'){
+                        // 如果是'S': 普通货主   'H': 合同制货主
+                        // 如果不是合同制判断有没有认证     审核码怎么跳转
+                        if(res.data.data.userInfo.isRenzheng == 'N'){
+                            // 没有认证跳转到认证页
+                            this.$router.push({
+                                // path: '/renzheng'
+                            });
+                        }else {
+                            // 如果认证了跳转到首页   ？？？？？？？？？？？？？判断审核码
+                            this.$router.push({
+                                path: '/'
+                            });
+                        }
+                    }else{
+                        // 如果是合同制跳转到首页
+                        this.$router.push({
+                            path: '/'
+                        });
+                    }
+                }
             },
             // 失去焦点验证密码的强度
             testPassword(e){
