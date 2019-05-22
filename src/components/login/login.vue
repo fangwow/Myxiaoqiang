@@ -18,8 +18,8 @@
                 <span @click='login()'>登录</span>
             </div>
             <div class="wangjimima">
-                <span>忘记密码</span>
-                <span>注册</span>
+                <span @click='jump(0)'>忘记密码</span>
+                <span　@click='jump(1)'>注册</span>
             </div>
         </div>
     </div>
@@ -30,13 +30,20 @@
         data(){
             return {
                 phone: '',
-                password: ''
+                password: '',
+                arr: ['/forget','/register']
             }
         },
         mounted(){
 
         },
         methods: {
+            // 跳转
+            jump(num){
+                this.$router.push({
+                    path: this.arr[num]
+                });
+            },
             // 登录时触发
             async login(){
                 if(this.phone.trim().length === 0){

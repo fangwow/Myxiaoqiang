@@ -100,7 +100,7 @@
             </div>
             <!-- 按钮 -->
             <div class="btn">
-                <button>提交</button>
+                <button @click='jump()'>提交</button>
             </div>
         </div>
     </div>
@@ -117,7 +117,11 @@ export default {
         }
     },
     methods: {
-
+        jump(){
+            this.$router.push({
+                path: '/'
+            })
+        }
     },
     components: {
         headerTitle
