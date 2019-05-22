@@ -54,21 +54,21 @@
                 请选择支付方式
             </div>
             <div class="order_form01">
-                <div>
+                <div class='img'>
                     <img src="../../../static/images/zhifubao.png" alt="">
                     <span>支付宝支付</span>
                 </div>
                 <div class="circle"></div>
             </div>
             <div class="order_form01">
-                <div>
+                <div class='img'>
                     <img src="../../../static/images/weixin.png" alt="">
                     <span>微信支付</span>
                 </div>
                 <div class="circle"></div>
             </div>
             <div class="order_form01 last">
-                <div>
+                <div class='img'>
                     <img src="../../../static/images/yinlianka.png" alt="">
                     <span>银行卡支付</span>
                 </div>
@@ -295,11 +295,15 @@ export default {
             justify-content: space-between;
             align-items: center;
             border-bottom: 0.01rem solid #ddd;
-            img {
-                vertical-align: middle;
-                width: 0.7rem;
-                height: 0.7rem;
-                margin-right: 0.21rem;
+            .img {
+                flex: 1;
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 0.7rem;
+                    height: 0.7rem;
+                    margin-right: 0.21rem;
+                }
             }
             .circle {
                 width: 0.4rem;
